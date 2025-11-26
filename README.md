@@ -42,3 +42,17 @@ We further reveal the diffusion-generation space discrepancy in continuous-time 
 
 ## ⭐ Acknowledgements
 This work is built upon the **[Sana series](https://github.com/NVlabs/Sana)** (Sana, Sana 1.5, Sana-Sprint). We sincerely thank the authors for their wonderful works and contributions to the community.
+
+## 📄 Citation
+If you find TBCM useful, please consider giving us a star 🌟 and citing it as follows:
+
+```bibtex
+@misc{tang2025tbcm,
+      title={Image-Free Timestep Distillation via Continuous-Time Consistency with Trajectory-Sampled Pairs}, 
+      author={Bao Tang and Shuai Zhang and Yueting Zhu and Jijun Xiang and Xin Yang and Li Yu and Wenyu Liu and Xinggang Wang},
+      year={2025},
+      eprint={2511.20410},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2511.20410}, 
+}
