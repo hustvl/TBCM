@@ -16,8 +16,8 @@ Huazhong University of Science and Technology (HUST)
 </div>
 
 ## 📰 News
-- **[2025.11.25]** We’ve released our paper on arXiv.
 - **[Upcoming]** Training code will be released soon.
+- **[2025.11.25]** We’ve released our paper on [arXiv](https://arxiv.org/abs/2511.20410).
 
 ## 📝 Introduction
 
