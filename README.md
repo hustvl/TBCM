@@ -15,8 +15,19 @@ Huazhong University of Science and Technology (HUST)
 <img src="./assets/Generate.jpg" width="100%" alt="Generate">
 </div>
 
+## ✨ Highlights
+
+🖼️ **Image-Free Distillation Framework** — Performs consistency distillation using intermediate states from pretrained model inference, eliminating the need for real training images.
+
+🎯 **Pure Latent Space Training** — The entire distillation pipeline operates in latent space without requiring VAE encoding/decoding during training.
+
+⚡ **Dramatic Efficiency Gains** — Reduces GPU memory usage by ~64.1% and training time by ~41.7% compared to standard sCM under identical configurations.
+
+📊 **Superior Generation Quality** — Achieves FID 6.52 on MJHQ30k by eliminating training-inference inconsistencies, outperforming baseline methods.
+
+
 ## 📰 News
-- **[Upcoming]** Training code will be released soon.
+- **[2025.12.16]** Training code has been released.
 - **[2025.11.25]** We’ve released our paper on [arXiv](https://arxiv.org/abs/2511.20410).
 
 ## 📝 Introduction
@@ -39,6 +50,29 @@ We further reveal the diffusion-generation space discrepancy in continuous-time 
 <div align="center">
 <img src="./assets/Result2.png" width="100%" alt="Result2">
 </div>
+
+## 🛠️ How to Use
+### Environment
+We recommend using `conda` to set up the environment.
+
+```bash
+conda create -n your_env_name python=3.10 -y
+conda activate your_env_name
+pip install -U xformers==0.0.27.post2 --index-url https://download.pytorch.org/whl/cu121
+pip install -e .
+```
+
+### Preparation
+Before training, you need to prepare the dataset and required pretrained weights. 
+1. **Dataset**: You only need to prepare a text file as the dataset, with one prompt per line.
+2. **Pretrained Weights**: You need to download the pretrained [Text Encoder](https://huggingface.co/Efficient-Large-Model/gemma-2-2b-it), [VAE](https://huggingface.co/mit-han-lab/dc-ae-f32c32-sana-1.1-diffusers), and [Diffusion Model](https://huggingface.co/Efficient-Large-Model/Sana_Sprint_0.6B_1024px_teacher)
+
+### Train
+Run the training script with the desired configuration.
+
+```bash
+bash train_scripts/train_tbcm.sh configs/600M_1024px_tbcm.yaml
+```
 
 ## ⭐ Acknowledgements
 This work is built upon the **[Sana series](https://github.com/NVlabs/Sana)** (Sana, Sana 1.5, Sana-Sprint). We sincerely thank the authors for their wonderful works and contributions to the community.
